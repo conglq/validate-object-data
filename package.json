@@ -1,0 +1,27 @@
+{
+  "name": "validate-object-data",
+  "version": "0.0.1",
+  "description": "validate object data",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "validate"
+  ],
+  "dependencies": {
+    "sanitize-html": "^1.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conglq/validate-object-data.git"
+  },
+  "author": "Le Quang Cong <leqcong@gmail.com>",
+  "license": "MIT"
+}
