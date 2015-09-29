@@ -4,37 +4,37 @@ describe("Validate", function(){
 	var validate;
 	it("successfully initialized", function(){
 		validate = require('../index');
-	})
-	it("successfully test", function(){
-		console.log(validate._getdata({
+	});
+	it("successfully simple test", function(){
+		console.log(validate.get_data({
 		    is_avai: true
 		},[
 			{
-			    type: "_boolean",
+			    type: "boolean",
 			    name: "is_avai"
 			}
 		]));
 	});
 
-	it("successfully test", function(){
-		validate._addNewObjectType("_zipcode",  function(str_zipcode){
+	it("successfully add_new_object_type", function(){
+		validate.add_new_object_type("zipcode",  function(str_zipcode){
 	    	var reg = /^\d+$/;
 	    	str_zipcode = str_zipcode.toString();
 	    	if (reg.test(str_zipcode) && str_zipcode.length == 5) {
 	    		return str_zipcode;
 	    	};
 	    	return "error";
-		})
-		console.log(validate._getdata({
+		});
+		console.log(validate.get_data({
 		    is_avai: true,
 		    zipcode: '12345'
 		},[
 			{
-			    type: "_boolean",
+			    type: "boolean",
 			    name: "is_avai"
 			},
 			{
-				type: "_zipcode",
+				type: "zipcode",
 			    name: "zipcode"
 			}
 		]));
