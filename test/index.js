@@ -24,6 +24,11 @@ describe("Validate", function(){
         expect(result.id).to.equal("560cbdf4c1b2637d0b86d611");
 	});
 
+	it("filter_accented_characters", function(){
+		var test_str = validate.check_valid.filter_accented_characters("  le  cong ^ '  ","a-zA-Z0-9 '");
+        expect(test_str).to.equal("le cong '");
+	});
+
 	it("successfully add_new_object_type", function(){
 		validate.add_new_object_type({
 			name: "zipcode",
